@@ -1,9 +1,9 @@
 <template>
   <div class="about ">
     <div class="d-flex justify-content-around my-5 mx-auto">
-      <h3>رکسانا رحیمی</h3>
-      <h3>شهروند آرژانتین</h3>
-      <h3>1402-08-15</h3>
+      <h3>{{ query.name }}</h3>
+      <h3>{{  query.shop_name }}</h3>
+      <h3>{{ query.date }}</h3>
     </div>
 
 

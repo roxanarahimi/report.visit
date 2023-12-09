@@ -57,7 +57,7 @@
           <tbody>
           <tr v-for="(item,index) in forms" :key="index">
             <th scope="row">{{ index + 1 }}</th>
-            <td><router-link :to="{path:'/form/'+item.form_id, query:{ grade: item.shop_grade  }}">{{ item.visitor_name }} </router-link></td>
+            <td><router-link :to="{path:'/form/'+item.form_id, query:{ grade: item.shop_grade,shop_name: item.shop_name, date:item.visit_date, name:item.visitor_name  }}">{{ item.visitor_name }} </router-link></td>
             <td>{{ item.shop_city }}</td>
             <td>{{ item.shop_grade }}</td>
             <td>{{ item.shop_name }}</td>
