@@ -5,7 +5,7 @@
       
       <div>
         <div class="row my-3 text-end">
-          <div class="col-6">
+          <div class="col-5">
             <label >نام ویزیتور</label>
             <select class="form-select" v-model="visitor">
               <option value="">همه</option>
@@ -26,7 +26,7 @@
 <!--              <option v-for="item in shops" :key="item.id" :value="item.id">{{item.username}}</option>-->
 <!--            </select>-->
 <!--          </div>-->
-          <div class="col-5">
+          <div class="col-4">
             <label  >تاریخ</label> <date-picker
                v-model="date"
               :format="options.format"
@@ -37,36 +37,38 @@
               :color="options.color"
               :autoSubmit="options.autoSubmit"></date-picker>
           </div>
-          <div class="col-1 pt-4">
+          <div class="col-3 pt-4">
             <button @click="filter" class="btn btn-dark">جستوجو</button>
           </div>
         </div>
       </div>
-      <table v-if="forms.length" class="table table-striped border">
-        <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">ویزیتور</th>
-          <th scope="col">شهر</th>
-          <th scope="col">گرید فروشگاه</th>
-          <th scope="col">فروشگاه</th>
-          <th scope="col">تاریخ</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr v-for="(item,index) in forms" :key="index">
-          <th scope="row">{{ index + 1 }}</th>
-          <td><router-link :to="{path:'/form/'+item.form_id, query:{ grade: item.shop_grade  }}">{{ item.visitor_name }} </router-link></td>
-          <td>{{ item.shop_city }}</td>
-          <td>{{ item.shop_grade }}</td>
-          <td>{{ item.shop_name }}</td>
-          <td>{{  item.visit_date }}</td>
-        </tr>
-        </tbody>
-      </table>
-      <div v-else class=" d-flex justify-content-center mt-5">
-        <div class="spinner-grow text-dark" role="status">
-          <span class="visually-hidden">Loading...</span>
+      <div class="table-responsive" >
+        <table v-if="forms.length" class="table  table-striped border">
+          <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">ویزیتور</th>
+            <th scope="col">شهر</th>
+            <th scope="col">گرید فروشگاه</th>
+            <th scope="col">فروشگاه</th>
+            <th scope="col">تاریخ</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr v-for="(item,index) in forms" :key="index">
+            <th scope="row">{{ index + 1 }}</th>
+            <td><router-link :to="{path:'/form/'+item.form_id, query:{ grade: item.shop_grade  }}">{{ item.visitor_name }} </router-link></td>
+            <td>{{ item.shop_city }}</td>
+            <td>{{ item.shop_grade }}</td>
+            <td>{{ item.shop_name }}</td>
+            <td>{{  item.visit_date }}</td>
+          </tr>
+          </tbody>
+        </table>
+        <div v-else class=" d-flex justify-content-center mt-5">
+          <div class="spinner-grow text-dark" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
         </div>
       </div>
     </div>
