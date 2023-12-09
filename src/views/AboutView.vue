@@ -281,7 +281,7 @@
 
           <div class="p-3">
             <table v-if="form.length" class="table table-bordered border">
-              <tbody>1
+              <tbody>
               <tr>
                 <td>جمع امتیاز عدم</td><td class="points_td">{{ points.total_absence }}</td>
               </tr>
