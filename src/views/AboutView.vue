@@ -7,7 +7,7 @@
     </div>
 
 
-    <div style="overflow-x: scroll">
+    <div class="tables_container">
     <div style="min-width: 600px;">
       <div class="container row mx-auto mb-3" >
         <div class="col-4 px-0">
@@ -648,10 +648,19 @@ th {
 }
 
 .points_td {
-  width: 10px !important;
+  width: 5px !important;
+  padding: 0px !important;
 }
 
 .bg-gray {
   background-color: #989898;
+}
+.tables_container{
+  overflow-x: hidden;
+}
+@media(max-width: 650px){
+  .tables_container{
+    overflow-x: scroll;
+  }
 }
 </style>
