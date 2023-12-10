@@ -802,9 +802,8 @@ th, td {
 }
 th
  {
-  width: 47px !important;
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
+  width: 60px !important;
+  padding: 0px !important;
   vertical-align: middle !important;
   background-color: transparent !important;
 }
