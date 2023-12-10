@@ -6,7 +6,7 @@
       <div>
         <div class="row my-3 text-end">
           <div class="col-5">
-            <label >نام ویزیتور</label>
+            <label >نام کارشناس</label>
             <select class="form-select" v-model="visitor">
               <option value="">همه</option>
               <option v-for="item in visitors" :key="item.id" :value="item.id">{{item.username}}</option>
@@ -47,7 +47,7 @@
           <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">ویزیتور</th>
+            <th scope="col">کارشناس</th>
             <th scope="col">شهر</th>
             <th scope="col">گرید فروشگاه</th>
             <th scope="col">فروشگاه</th>

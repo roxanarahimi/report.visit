@@ -9,11 +9,11 @@
 
     <div class="tables_container">
     <div style="min-width: 600px;">
-      <div class="container row mx-auto mb-3" >
+      <div class="t-container container row mx-auto mb-3" >
         <div class="col-4 px-0">
           <table v-if="eliteSoup.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >سوپ الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >سوپ الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in eliteSoup" :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -21,7 +21,7 @@
           </table>
           <table v-if="eliteNoodle.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >نودالیت الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >نودالیت الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in eliteNoodle"  :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -29,7 +29,7 @@
           </table>
           <table v-if="eliteOsareh.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >عصاره الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >عصاره الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in eliteOsareh"  :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -37,7 +37,7 @@
           </table>
           <table v-if="eliteAsh.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >آش الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >آش الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in eliteAsh"  :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -45,7 +45,7 @@
           </table>
           <table v-if="eliteParak.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >پرک الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >پرک الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in eliteParak"  :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -58,7 +58,7 @@
 
           <table v-if="lazizSoup.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >سوپ آماده لذیذ</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >سوپ آماده لذیذ</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in lazizSoup"  :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -67,7 +67,7 @@
 
           <table v-if="lazizOsareh.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >عصاره آماده لذیذ</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >عصاره آماده لذیذ</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in lazizOsareh"  :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -76,7 +76,7 @@
 
           <table v-if="lazizNoodle.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >نودل آماده لذیذ</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >نودل آماده لذیذ</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in lazizNoodle"  :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -85,7 +85,7 @@
 
           <table v-if="nodiland.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >عصاره سوپ نودل نودیلند</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >عصاره سوپ نودل نودیلند</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in nodiland"  :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.type }} {{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -94,7 +94,7 @@
 
           <table v-if="eliteAdvieh.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >ادویه طعم دهنده الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >ادویه طعم دهنده الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in eliteAdvieh"  :class="{'bg-gray': item.is_main == false}">
               <td> {{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -103,7 +103,7 @@
 
           <table v-if="elitePasta.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >پاستا الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >پاستا الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in elitePasta"  :class="{'bg-gray': item.is_main == false}">
               <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -112,7 +112,7 @@
 
           <table v-if="elitePiazdaq.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >پیاز داغ الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >پیاز داغ <br> الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in elitePiazdaq" :class="{'bg-gray': item.is_main == false}">
               <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -124,7 +124,7 @@
 
           <table v-if="copaCofee.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >قهوه کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >قهوه کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in copaCofee" :class="{'bg-gray': item.is_main == false}">
               <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -132,7 +132,7 @@
           </table>
           <table v-if="fitoFunPouding.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >پودینگ فیت و فان</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >پودینگ فیت و فان</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in fitoFunPouding" :class="{'bg-gray': item.is_main == false}">
               <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -140,7 +140,7 @@
           </table>
           <table v-if="copaPouding.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >پودینگ کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >پودینگ کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in copaPouding" :class="{'bg-gray': item.is_main == false}">
               <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -148,7 +148,7 @@
           </table>
           <table v-if="copaJeleh.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >ژله کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >ژله کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in copaJeleh" :class="{'bg-gray': item.is_main == false}">
               <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -156,7 +156,7 @@
           </table>
           <table v-if="copaQalatSobhane.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >غلات صبحانه کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >غلات صبحانه کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in copaQalatSobhane" :class="{'bg-gray': item.is_main == false}">
               <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -164,7 +164,7 @@
           </table>
           <table v-if="copaChocolateSobhane.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >شکلات صبحانه کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >شکلات صبحانه کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in copaChocolateSobhane" :class="{'bg-gray': item.is_main == false}">
               <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -174,11 +174,11 @@
 
         </div>
       </div>
-      <div class="container row mx-auto justify-content-center mb-5" >
-        <div class="col-6 col-md-4 px-0">
+      <div class="t-container container row mx-auto justify-content-center mb-5" >
+        <div class="col-6 px-0">
           <table v-if="kantiWafer.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >ویفر کانتی</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >ویفر کانتی</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in kantiWafer" :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -186,7 +186,7 @@
           </table>
           <table v-if="copaWafer.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >ویفر شکلاتی کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >ویفر شکلاتی کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in copaWafer" :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -195,7 +195,7 @@
 
           <table v-if="tombiWafer.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >ویفر تامبی</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >ویفر تامبی</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in tombiWafer" :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -203,7 +203,7 @@
           </table>
           <table v-if="copaDerajeh.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >دراژه</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >دراژه</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in copaDerajeh" :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -211,7 +211,7 @@
           </table>
           <table v-if="xfastAdams.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >آدامس</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >آدامس</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in xfastAdams" :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -220,7 +220,7 @@
 
           <table v-if="copaPaziraeeGandom.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >کوپا گندم</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >کوپا گندم</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in copaPaziraeeGandom"  :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -229,12 +229,12 @@
 
 
         </div>
-        <div class="col-6 col-md-4 px-0">
+        <div class="col-6 px-0">
 
 
           <table v-if="ocopa.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >او کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >او کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in ocopa"  :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -243,7 +243,7 @@
 
           <table v-if="copaPaziraeeJo.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >کوپا جو</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >کوپا جو</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in copaPaziraeeJo" :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -253,7 +253,7 @@
 
           <table v-if="copaPaziraee.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >چند غله</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >چند غله</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in copaPaziraee" :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -262,7 +262,7 @@
 
           <table v-if="clubWafer.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >ویفر کلاب</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >ویفر کلاب</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in clubWafer" :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -270,7 +270,7 @@
           </table>
           <table v-if="copaBiscuit.length" class="table table-bordered border">
             <tbody>
-            <tr><th rowspan="100" ><p class="p-0 m-0" >بیسکوئیت مستطیلی کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >بیسکوئیت مستطیلی کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
             <tr v-for="item in copaBiscuit" :class="{'bg-gray': item.is_main == false}">
               <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
             </tr>
@@ -471,7 +471,7 @@ export default {
           }).catch();
     }
     const getForm = () => {
-      axios.get('https://api.amadehlaziz.com:446/panel/form_products/' + route.params.id + '?api_key=w2fqxjKzdlx345NjQ7D99xz5cPp')
+      axios.get('https://api.amadehlaziz.com:446/panel/products/'+query.value.grade+'?api_key=w2fqxjKzdlx345NjQ7D99xz5cPp')
           .then((response) => {
             form.value = response.data
 
@@ -587,9 +587,183 @@ export default {
 
             })
             console.log('aaa', eliteNoodle.value)
-          }).catch((error) => {
-        console.error(error)
-      })
+          }).catch((error) => {console.error(error)})
+
+      axios.get('https://api.amadehlaziz.com:446/panel/form_products/' + route.params.id + '?api_key=w2fqxjKzdlx345NjQ7D99xz5cPp')
+          .then((response) => {
+            form.value = response.data
+
+            console.log('form', form.value)
+
+            form.value.forEach((element) => {
+              if (element.type === 'سوپ' && element.brand === 'الیت' && element.grade == query.value.grade) {
+                let x = eliteSoup.value.filter((item)=>{return item.id != element.product_id });
+                eliteSoup.value = x;
+                eliteSoup.value.push(element);
+              }
+              if (element.type === 'نودل' && element.brand === 'الیت' && element.grade == query.value.grade) {
+                let x = eliteNoodle.value.filter((item)=>{return item.id != element.product_id });
+                eliteNoodle.value = x;
+                eliteNoodle.value.push(element);
+              }
+              if (element.type === 'عصاره' && element.brand === 'الیت' && element.grade == query.value.grade) {
+                let x = eliteOsareh.value.filter((item)=>{return item.id != element.product_id });
+                eliteOsareh.value = x;
+                eliteOsareh.value.push(element);
+              }
+              if (element.type === 'آش' && element.brand === 'الیت' && element.grade == query.value.grade) {
+                let x = eliteAsh.value.filter((item)=>{return item.id != element.product_id });
+                eliteAsh.value = x;
+                eliteAsh.value.push(element);
+              }
+              if (element.type === 'پرک' && element.brand === 'الیت' && element.grade == query.value.grade) {
+                let x = eliteParak.value.filter((item)=>{return item.id != element.product_id });
+                eliteParak.value = x;
+                eliteParak.value.push(element);
+              }
+              if (element.type === 'ادویه' && element.brand === 'الیت' && element.grade == query.value.grade) {
+                let x = eliteAdvieh.value.filter((item)=>{return item.id != element.product_id });
+                eliteAdvieh.value = x;
+                eliteAdvieh.value.push(element);
+              }
+              if (element.type === 'پاستا' && element.brand === 'الیت' && element.grade == query.value.grade) {
+                let x = elitePasta.value.filter((item)=>{return item.id != element.product_id });
+                elitePasta.value = x;
+                elitePasta.value.push(element);
+              }
+              if (element.type === 'پیاز داغ' && element.brand === 'الیت' && element.grade == query.value.grade) {
+                let x = elitePiazdaq.value.filter((item)=>{return item.id != element.product_id });
+                elitePiazdaq.value = x;
+                elitePiazdaq.value.push(element);
+              }
+
+
+              if (element.type === 'سوپ' && element.brand === 'آماده لذیذ' && element.grade == query.value.grade) {
+                let x = lazizSoup.value.filter((item)=>{return item.id != element.product_id });
+                lazizSoup.value = x;
+                lazizSoup.value.push(element);
+              }
+              if (element.type === 'عصاره' && element.brand === 'آماده لذیذ' && element.grade == query.value.grade) {
+                let x = lazizOsareh.value.filter((item)=>{return item.id != element.product_id });
+                lazizOsareh.value = x;
+                lazizOsareh.value.push(element);
+              }
+              if (element.type === 'نودل' && element.brand === 'آماده لذیذ' && element.grade == query.value.grade) {
+                let x = lazizNoodle.value.filter((item)=>{return item.id != element.product_id });
+                lazizNoodle.value = x;
+                lazizNoodle.value.push(element);
+              }
+
+              if ((element.type === 'عصاره' || element.type === 'سوپ' || element.type === 'نودل') && element.brand === 'نودیلند' && element.grade == query.value.grade) {
+                let x = nodiland.value.filter((item)=>{return item.id != element.product_id });
+                nodiland.value = x;
+                nodiland.value.push(element);
+              }
+
+              if (element.type === 'قهوه' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+                let x = copaCofee.value.filter((item)=>{return item.id != element.product_id });
+                copaCofee.value = x;
+                copaCofee.value.push(element);
+              }
+              if (element.type === 'ژله' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+                let x = copaJeleh.value.filter((item)=>{return item.id != element.product_id });
+                copaJeleh.value = x;
+                copaJeleh.value.push(element);
+              }
+              if (element.type === 'پودینگ' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+                let x = copaPouding.value.filter((item)=>{return item.id != element.product_id });
+                copaPouding.value = x;
+                copaPouding.value.push(element);
+              }
+              if (element.type === 'دراژه' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+                let x = copaDerajeh.value.filter((item)=>{return item.id != element.product_id });
+                copaDerajeh.value = x;
+                copaDerajeh.value.push(element);
+              }
+              if (element.type === 'غلات صبحانه' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+                let x = copaQalatSobhane.value.filter((item)=>{return item.id != element.product_id });
+                copaQalatSobhane.value = x;
+                copaQalatSobhane.value.push(element);
+              }
+              if (element.type === 'بیسکوئیت پذیرایی' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+                let x = copaPaziraee.value.filter((item)=>{return item.id != element.product_id });
+                copaPaziraee.value = x;
+                copaPaziraee.value.push(element);
+              }
+              if (element.type === 'بیسکوئیت پذیرایی' && element.brand === 'کوپا گندم' && element.grade == query.value.grade) {
+                let x = copaPaziraeeGandom.value.filter((item)=>{return item.id != element.product_id });
+                copaPaziraeeGandom.value = x;
+                copaPaziraeeGandom.value.push(element);
+              }
+              if (element.type === 'بیسکوئیت پذیرایی' && element.brand === 'کوپا جو' && element.grade == query.value.grade) {
+                let x = copaPaziraeeJo.value.filter((item)=>{return item.id != element.product_id });
+                copaPaziraeeJo.value = x;
+                copaPaziraeeJo.value.push(element);
+              }
+
+              if (element.type === 'شکلات صبحانه' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+                let x = copaChocolateSobhane.value.filter((item)=>{return item.id != element.product_id });
+                copaChocolateSobhane.value = x;
+                copaChocolateSobhane.value.push(element);
+              }
+
+              if (element.type === 'آدامس' && element.brand === 'اکس فست' && element.grade == query.value.grade) {
+                let x = xfastAdams.value.filter((item)=>{return item.id != element.product_id });
+                xfastAdams.value = x;
+                xfastAdams.value.push(element);
+              }
+
+              if (element.type === 'ویفر' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+                let x = copaWafer.value.filter((item)=>{return item.id != element.product_id });
+                copaWafer.value = x;
+                copaWafer.value.push(element);
+              }
+
+
+              if (element.type === 'پودینگ' && element.brand === 'فیت و فان' && element.grade == query.value.grade) {
+                let x = fitoFunPouding.value.filter((item)=>{return item.id != element.product_id });
+                fitoFunPouding.value = x;
+                fitoFunPouding.value.push(element);
+              }
+
+
+              if (element.type === 'ویفر' && element.brand === 'کانتی' && element.grade == query.value.grade) {
+                let x = kantiWafer.value.filter((item)=>{return item.id != element.product_id });
+                kantiWafer.value = x;
+                kantiWafer.value.push(element);
+              }
+
+
+              if (element.type === 'ویفر' && element.brand === 'تامبی' && element.grade == query.value.grade) {
+                let x = tombiWafer.value.filter((item)=>{return item.id != element.product_id });
+                tombiWafer.value = x;
+                tombiWafer.value.push(element);
+              }
+
+              if (element.type === 'ویفر' && element.brand === 'کلاب' && element.grade == query.value.grade) {
+                let x = clubWafer.value.filter((item)=>{return item.id != element.product_id });
+                clubWafer.value = x;
+                clubWafer.value.push(element);
+              }
+
+
+              if (element.type === 'بیسکوئیت' && element.brand === 'او کوپا' && element.grade == query.value.grade) {
+                let x = ocopa.value.filter((item)=>{return item.id != element.product_id });
+                ocopa.value = x;
+                ocopa.value.push(element);
+              }
+
+
+              if (element.type === 'بیسکوئیت' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+                let x = copaBiscuit.value.filter((item)=>{return item.id != element.product_id });
+                copaBiscuit.value = x;
+                copaBiscuit.value.push(element);
+              }
+
+
+            })
+            console.log('aaa', eliteNoodle.value)
+          }).catch((error) => {console.error(error)})
     }
     onMounted(async () => {
       await router.isReady();
@@ -626,21 +800,37 @@ th, td {
   vertical-align: middle !important;
   background-color: transparent !important;
 }
+th
+ {
+  width: 47px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  vertical-align: middle !important;
+  background-color: transparent !important;
+}
 
 table {
   margin-bottom: 0 !important;
-  font-size: 11px !important;
+  font-size: 10px !important;
 }
-
+.t-container{
+  max-width: 30cm;
+}
+.title{
+  /*position: relative;*/
+  padding: 0 !important;
+}
 p {
   text-align: center !important;
-  /*transform: rotate(270deg);*/
+  transform: rotate(270deg);
+  margin: 0 !important;
+  /*position: absolute;*/
 
 }
 
 th {
-  background-color: black !important;
-  color: white !important;
+  /*background-color: #e5e5e5 !important;*/
+  /*color: white !important;*/
 }
 
 .table-bordered {
@@ -653,7 +843,7 @@ th {
 }
 
 .bg-gray {
-  background-color: #989898;
+  background-color: #b7b7b7;
 }
 .tables_container{
   overflow-x: hidden;
@@ -663,4 +853,5 @@ th {
     overflow-x: scroll;
   }
 }
+
 </style>
