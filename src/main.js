@@ -7,4 +7,5 @@ import "bootstrap"
 
 window.axios = require('axios')
 
-createApp(App).use(store).use(router).mount('#app')
+import Vue3SimpleHtml2pdf from "vue3-simple-html2pdf";
+createApp(App).use(store).use(router).use(Vue3SimpleHtml2pdf).mount('#app')

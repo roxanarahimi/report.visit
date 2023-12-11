@@ -6,174 +6,174 @@
       <h3>{{ query.date }}</h3>
     </div>
 
-
     <div class="tables_container">
     <div style="min-width: 600px;">
       <div class="t-container container row mx-auto mb-3" >
-        <div class="col-4 px-0">
-          <table v-if="eliteSoup.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >سوپ الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in eliteSoup" :class="{'bg-gray': item.is_main == false}">
-              <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-          <table v-if="eliteNoodle.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >نودالیت الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in eliteNoodle"  :class="{'bg-gray': item.is_main == false}">
-              <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-          <table v-if="eliteOsareh.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >عصاره الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in eliteOsareh"  :class="{'bg-gray': item.is_main == false}">
-              <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-          <table v-if="eliteAsh.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >آش الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in eliteAsh"  :class="{'bg-gray': item.is_main == false}">
-              <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-          <table v-if="eliteParak.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >پرک الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in eliteParak"  :class="{'bg-gray': item.is_main == false}">
-              <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
+      <div class="col-4 px-0">
+        <table v-if="eliteSoup.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >سوپ الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in eliteSoup" :class="{'bg-gray': item.is_main == false}">
+            <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+        <table v-if="eliteNoodle.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >نودالیت الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in eliteNoodle"  :class="{'bg-gray': item.is_main == false}">
+            <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+        <table v-if="eliteOsareh.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >عصاره الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in eliteOsareh"  :class="{'bg-gray': item.is_main == false}">
+            <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+        <table v-if="eliteAsh.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >آش الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in eliteAsh"  :class="{'bg-gray': item.is_main == false}">
+            <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+        <table v-if="eliteParak.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >پرک الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in eliteParak"  :class="{'bg-gray': item.is_main == false}">
+            <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
 
 
-        </div>
-        <div class="col-4 px-0">
-
-          <table v-if="lazizSoup.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >سوپ آماده لذیذ</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in lazizSoup"  :class="{'bg-gray': item.is_main == false}">
-              <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-
-          <table v-if="lazizOsareh.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >عصاره آماده لذیذ</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in lazizOsareh"  :class="{'bg-gray': item.is_main == false}">
-              <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-
-          <table v-if="lazizNoodle.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >نودل آماده لذیذ</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in lazizNoodle"  :class="{'bg-gray': item.is_main == false}">
-              <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-
-          <table v-if="nodiland.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >عصاره سوپ نودل نودیلند</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in nodiland"  :class="{'bg-gray': item.is_main == false}">
-              <td>{{ item.type }} {{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-
-          <table v-if="eliteAdvieh.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >ادویه طعم دهنده الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in eliteAdvieh"  :class="{'bg-gray': item.is_main == false}">
-              <td> {{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-
-          <table v-if="elitePasta.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >پاستا الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in elitePasta"  :class="{'bg-gray': item.is_main == false}">
-              <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-
-          <table v-if="elitePiazdaq.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >پیاز داغ <br> الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in elitePiazdaq" :class="{'bg-gray': item.is_main == false}">
-              <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-
-        </div>
-        <div class="col-4 px-0">
-
-          <table v-if="copaCofee.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >قهوه کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in copaCofee" :class="{'bg-gray': item.is_main == false}">
-              <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-          <table v-if="fitoFunPouding.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >پودینگ فیت و فان</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in fitoFunPouding" :class="{'bg-gray': item.is_main == false}">
-              <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-          <table v-if="copaPouding.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >پودینگ کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in copaPouding" :class="{'bg-gray': item.is_main == false}">
-              <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-          <table v-if="copaJeleh.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >ژله کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in copaJeleh" :class="{'bg-gray': item.is_main == false}">
-              <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-          <table v-if="copaQalatSobhane.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >غلات صبحانه کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in copaQalatSobhane" :class="{'bg-gray': item.is_main == false}">
-              <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-          <table v-if="copaChocolateSobhane.length" class="table table-bordered border">
-            <tbody>
-            <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >شکلات صبحانه کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
-            <tr v-for="item in copaChocolateSobhane" :class="{'bg-gray': item.is_main == false}">
-              <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
-            </tr>
-            </tbody>
-          </table>
-
-
-        </div>
       </div>
+      <div class="col-4 px-0">
+
+        <table v-if="lazizSoup.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >سوپ آماده لذیذ</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in lazizSoup"  :class="{'bg-gray': item.is_main == false}">
+            <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table v-if="lazizOsareh.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >عصاره آماده لذیذ</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in lazizOsareh"  :class="{'bg-gray': item.is_main == false}">
+            <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table v-if="lazizNoodle.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >نودل آماده لذیذ</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in lazizNoodle"  :class="{'bg-gray': item.is_main == false}">
+            <td>{{ item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table v-if="nodiland.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >عصاره سوپ نودل نودیلند</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in nodiland"  :class="{'bg-gray': item.is_main == false}">
+            <td>{{ item.type }} {{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table v-if="eliteAdvieh.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >ادویه طعم دهنده الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in eliteAdvieh"  :class="{'bg-gray': item.is_main == false}">
+            <td> {{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table v-if="elitePasta.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >پاستا الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in elitePasta"  :class="{'bg-gray': item.is_main == false}">
+            <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table v-if="elitePiazdaq.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >پیاز داغ <br> الیت</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in elitePiazdaq" :class="{'bg-gray': item.is_main == false}">
+            <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <div class="col-4 px-0">
+
+        <table v-if="copaCofee.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >قهوه کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in copaCofee" :class="{'bg-gray': item.is_main == false}">
+            <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+        <table v-if="fitoFunPouding.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >پودینگ فیت و فان</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in fitoFunPouding" :class="{'bg-gray': item.is_main == false}">
+            <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+        <table v-if="copaPouding.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >پودینگ کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in copaPouding" :class="{'bg-gray': item.is_main == false}">
+            <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+        <table v-if="copaJeleh.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >ژله کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in copaJeleh" :class="{'bg-gray': item.is_main == false}">
+            <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+        <table v-if="copaQalatSobhane.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >غلات صبحانه کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in copaQalatSobhane" :class="{'bg-gray': item.is_main == false}">
+            <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+        <table v-if="copaChocolateSobhane.length" class="table table-bordered border">
+          <tbody>
+          <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >شکلات صبحانه کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
+          <tr v-for="item in copaChocolateSobhane" :class="{'bg-gray': item.is_main == false}">
+            <td>{{item.name }}</td><td>{{ item.shelf }}</td><td>{{ item.FT }}</td>
+          </tr>
+          </tbody>
+        </table>
+
+
+      </div>
+    </div>
+
       <div class="t-container container row mx-auto justify-content-center mb-5" >
         <div class="col-6 px-0">
           <table v-if="kantiWafer.length" class="table table-bordered border">
@@ -372,9 +372,26 @@ import {onMounted, ref} from "vue";
 import {useRoute, useRouter} from "vue-router/dist/vue-router";
 import trueFalse from "@/components/TrueFalse";
 
+
 export default {
-  components: {trueFalse},
+  components: {trueFalse, },
   setup() {
+    const pdfOptions = {
+      margin: 2,
+      image: {
+        type: 'jpeg',
+        quality: 1,
+      },
+      html2canvas: { scale: 1 },
+      jsPDF: {
+        unit: 'mm',
+        format: 'a4',
+        orientation: 'p',
+      },
+    };
+     const exportFilename= 'my-custom-file.pdf';
+
+
     const route = useRoute()
     const router = useRouter()
     const query = ref({})
@@ -464,7 +481,7 @@ export default {
 
 
     const getPoints = () => {
-      axios.get('https://api.amadehlaziz.com:446/form/46?api_key=mJF2qVIOq22K1LvNBp9gDiOcK8e2p')
+      axios.get('https://api.amadehlaziz.com:446/form/'+route.params.id+'?api_key=mJF2qVIOq22K1LvNBp9gDiOcK8e2p')
           .then((response) => {
             points.value = response.data.points;
 
@@ -787,7 +804,13 @@ export default {
       fitoFunPouding,
       ocopa,
       clubWafer,
+      exportFilename, pdfOptions,
     }
+  }
+  ,
+  mounted() {
+    // this.$refs.vue3SimpleHtml2pdf.download();
+
   }
 }
 </script>
@@ -813,7 +836,7 @@ table {
   font-size: 10px !important;
 }
 .t-container{
-  max-width: 30cm;
+  max-width: 15cm;
 }
 .title{
   /*position: relative;*/
