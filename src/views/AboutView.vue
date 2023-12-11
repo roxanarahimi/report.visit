@@ -1,9 +1,9 @@
 <template>
   <div class="about ">
-    <div class="d-flex justify-content-around my-5 mx-auto">
-      <h3>{{ query.name }}</h3>
-      <h3>{{  query.shop_name }}</h3>
-      <h3>{{ query.date }}</h3>
+    <div  class="d-flex justify-content-around my-5 mx-auto">
+      <h3>{{ info?.name }}</h3>
+      <h3>{{  info?.shop_name }}</h3>
+      <h3>{{ info?.date }}</h3>
     </div>
 
     <div class="tables_container">
@@ -488,116 +488,116 @@ export default {
           }).catch();
     }
     const getForm = () => {
-      axios.get('https://api.amadehlaziz.com:446/panel/products/'+query.value.grade+'?api_key=w2fqxjKzdlx345NjQ7D99xz5cPp')
+      axios.get('https://api.amadehlaziz.com:446/panel/products/'+JSON.parse(localStorage.getItem('report_visit_info')).grade+'?api_key=w2fqxjKzdlx345NjQ7D99xz5cPp')
           .then((response) => {
             form.value = response.data
 
             console.log('form', form.value)
 
             form.value.forEach((element) => {
-              if (element.type === 'سوپ' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'سوپ' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 eliteSoup.value.push(element);
               }
-              if (element.type === 'نودل' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'نودل' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 eliteNoodle.value.push(element);
               }
-              if (element.type === 'عصاره' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'عصاره' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 eliteOsareh.value.push(element);
               }
-              if (element.type === 'آش' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'آش' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 eliteAsh.value.push(element);
               }
-              if (element.type === 'پرک' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'پرک' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 eliteParak.value.push(element);
               }
-              if (element.type === 'ادویه' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'ادویه' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 eliteAdvieh.value.push(element);
               }
-              if (element.type === 'پاستا' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'پاستا' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 elitePasta.value.push(element);
               }
-              if (element.type === 'پیاز داغ' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'پیاز داغ' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 elitePiazdaq.value.push(element);
               }
 
 
-              if (element.type === 'سوپ' && element.brand === 'آماده لذیذ' && element.grade == query.value.grade) {
+              if (element.type === 'سوپ' && element.brand === 'آماده لذیذ' && element.grade == info.value.grade) {
                 lazizSoup.value.push(element);
               }
-              if (element.type === 'عصاره' && element.brand === 'آماده لذیذ' && element.grade == query.value.grade) {
+              if (element.type === 'عصاره' && element.brand === 'آماده لذیذ' && element.grade == info.value.grade) {
                 lazizOsareh.value.push(element);
               }
-              if (element.type === 'نودل' && element.brand === 'آماده لذیذ' && element.grade == query.value.grade) {
+              if (element.type === 'نودل' && element.brand === 'آماده لذیذ' && element.grade == info.value.grade) {
                 lazizNoodle.value.push(element);
               }
 
-              if ((element.type === 'عصاره' || element.type === 'سوپ' || element.type === 'نودل') && element.brand === 'نودیلند' && element.grade == query.value.grade) {
+              if ((element.type === 'عصاره' || element.type === 'سوپ' || element.type === 'نودل') && element.brand === 'نودیلند' && element.grade == info.value.grade) {
                 nodiland.value.push(element);
               }
 
-              if (element.type === 'قهوه' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'قهوه' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 copaCofee.value.push(element);
               }
-              if (element.type === 'ژله' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'ژله' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 copaJeleh.value.push(element);
               }
-              if (element.type === 'پودینگ' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'پودینگ' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 copaPouding.value.push(element);
               }
-              if (element.type === 'دراژه' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'دراژه' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 copaDerajeh.value.push(element);
               }
-              if (element.type === 'غلات صبحانه' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'غلات صبحانه' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 copaQalatSobhane.value.push(element);
               }
-              if (element.type === 'بیسکوئیت پذیرایی' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'بیسکوئیت پذیرایی' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 copaPaziraee.value.push(element);
               }
-              if (element.type === 'بیسکوئیت پذیرایی' && element.brand === 'کوپا گندم' && element.grade == query.value.grade) {
+              if (element.type === 'بیسکوئیت پذیرایی' && element.brand === 'کوپا گندم' && element.grade == info.value.grade) {
                 copaPaziraeeGandom.value.push(element);
               }
-              if (element.type === 'بیسکوئیت پذیرایی' && element.brand === 'کوپا جو' && element.grade == query.value.grade) {
+              if (element.type === 'بیسکوئیت پذیرایی' && element.brand === 'کوپا جو' && element.grade == info.value.grade) {
                 copaPaziraeeJo.value.push(element);
               }
 
-              if (element.type === 'شکلات صبحانه' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'شکلات صبحانه' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 copaChocolateSobhane.value.push(element);
               }
 
-              if (element.type === 'آدامس' && element.brand === 'اکس فست' && element.grade == query.value.grade) {
+              if (element.type === 'آدامس' && element.brand === 'اکس فست' && element.grade == info.value.grade) {
                 xfastAdams.value.push(element);
               }
 
-              if (element.type === 'ویفر' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'ویفر' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 copaWafer.value.push(element);
               }
 
 
-              if (element.type === 'پودینگ' && element.brand === 'فیت و فان' && element.grade == query.value.grade) {
+              if (element.type === 'پودینگ' && element.brand === 'فیت و فان' && element.grade == info.value.grade) {
                 fitoFunPouding.value.push(element);
               }
 
 
-              if (element.type === 'ویفر' && element.brand === 'کانتی' && element.grade == query.value.grade) {
+              if (element.type === 'ویفر' && element.brand === 'کانتی' && element.grade == info.value.grade) {
                 kantiWafer.value.push(element);
               }
 
 
-              if (element.type === 'ویفر' && element.brand === 'تامبی' && element.grade == query.value.grade) {
+              if (element.type === 'ویفر' && element.brand === 'تامبی' && element.grade == info.value.grade) {
                 tombiWafer.value.push(element);
               }
 
-              if (element.type === 'ویفر' && element.brand === 'کلاب' && element.grade == query.value.grade) {
+              if (element.type === 'ویفر' && element.brand === 'کلاب' && element.grade == info.value.grade) {
                 clubWafer.value.push(element);
               }
 
 
-              if (element.type === 'بیسکوئیت' && element.brand === 'او کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'بیسکوئیت' && element.brand === 'او کوپا' && element.grade == info.value.grade) {
                 ocopa.value.push(element);
               }
 
 
-              if (element.type === 'بیسکوئیت' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'بیسکوئیت' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 copaBiscuit.value.push(element);
               }
 
@@ -613,165 +613,165 @@ export default {
             console.log('form', form.value)
 
             form.value.forEach((element) => {
-              if (element.type === 'سوپ' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'سوپ' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 let x = eliteSoup.value.filter((item)=>{return item.id != element.product_id });
                 eliteSoup.value = x;
                 eliteSoup.value.push(element);
               }
-              if (element.type === 'نودل' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'نودل' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 let x = eliteNoodle.value.filter((item)=>{return item.id != element.product_id });
                 eliteNoodle.value = x;
                 eliteNoodle.value.push(element);
               }
-              if (element.type === 'عصاره' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'عصاره' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 let x = eliteOsareh.value.filter((item)=>{return item.id != element.product_id });
                 eliteOsareh.value = x;
                 eliteOsareh.value.push(element);
               }
-              if (element.type === 'آش' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'آش' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 let x = eliteAsh.value.filter((item)=>{return item.id != element.product_id });
                 eliteAsh.value = x;
                 eliteAsh.value.push(element);
               }
-              if (element.type === 'پرک' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'پرک' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 let x = eliteParak.value.filter((item)=>{return item.id != element.product_id });
                 eliteParak.value = x;
                 eliteParak.value.push(element);
               }
-              if (element.type === 'ادویه' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'ادویه' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 let x = eliteAdvieh.value.filter((item)=>{return item.id != element.product_id });
                 eliteAdvieh.value = x;
                 eliteAdvieh.value.push(element);
               }
-              if (element.type === 'پاستا' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'پاستا' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 let x = elitePasta.value.filter((item)=>{return item.id != element.product_id });
                 elitePasta.value = x;
                 elitePasta.value.push(element);
               }
-              if (element.type === 'پیاز داغ' && element.brand === 'الیت' && element.grade == query.value.grade) {
+              if (element.type === 'پیاز داغ' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 let x = elitePiazdaq.value.filter((item)=>{return item.id != element.product_id });
                 elitePiazdaq.value = x;
                 elitePiazdaq.value.push(element);
               }
 
 
-              if (element.type === 'سوپ' && element.brand === 'آماده لذیذ' && element.grade == query.value.grade) {
+              if (element.type === 'سوپ' && element.brand === 'آماده لذیذ' && element.grade == info.value.grade) {
                 let x = lazizSoup.value.filter((item)=>{return item.id != element.product_id });
                 lazizSoup.value = x;
                 lazizSoup.value.push(element);
               }
-              if (element.type === 'عصاره' && element.brand === 'آماده لذیذ' && element.grade == query.value.grade) {
+              if (element.type === 'عصاره' && element.brand === 'آماده لذیذ' && element.grade == info.value.grade) {
                 let x = lazizOsareh.value.filter((item)=>{return item.id != element.product_id });
                 lazizOsareh.value = x;
                 lazizOsareh.value.push(element);
               }
-              if (element.type === 'نودل' && element.brand === 'آماده لذیذ' && element.grade == query.value.grade) {
+              if (element.type === 'نودل' && element.brand === 'آماده لذیذ' && element.grade == info.value.grade) {
                 let x = lazizNoodle.value.filter((item)=>{return item.id != element.product_id });
                 lazizNoodle.value = x;
                 lazizNoodle.value.push(element);
               }
 
-              if ((element.type === 'عصاره' || element.type === 'سوپ' || element.type === 'نودل') && element.brand === 'نودیلند' && element.grade == query.value.grade) {
+              if ((element.type === 'عصاره' || element.type === 'سوپ' || element.type === 'نودل') && element.brand === 'نودیلند' && element.grade == info.value.grade) {
                 let x = nodiland.value.filter((item)=>{return item.id != element.product_id });
                 nodiland.value = x;
                 nodiland.value.push(element);
               }
 
-              if (element.type === 'قهوه' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'قهوه' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 let x = copaCofee.value.filter((item)=>{return item.id != element.product_id });
                 copaCofee.value = x;
                 copaCofee.value.push(element);
               }
-              if (element.type === 'ژله' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'ژله' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 let x = copaJeleh.value.filter((item)=>{return item.id != element.product_id });
                 copaJeleh.value = x;
                 copaJeleh.value.push(element);
               }
-              if (element.type === 'پودینگ' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'پودینگ' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 let x = copaPouding.value.filter((item)=>{return item.id != element.product_id });
                 copaPouding.value = x;
                 copaPouding.value.push(element);
               }
-              if (element.type === 'دراژه' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'دراژه' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 let x = copaDerajeh.value.filter((item)=>{return item.id != element.product_id });
                 copaDerajeh.value = x;
                 copaDerajeh.value.push(element);
               }
-              if (element.type === 'غلات صبحانه' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'غلات صبحانه' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 let x = copaQalatSobhane.value.filter((item)=>{return item.id != element.product_id });
                 copaQalatSobhane.value = x;
                 copaQalatSobhane.value.push(element);
               }
-              if (element.type === 'بیسکوئیت پذیرایی' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'بیسکوئیت پذیرایی' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 let x = copaPaziraee.value.filter((item)=>{return item.id != element.product_id });
                 copaPaziraee.value = x;
                 copaPaziraee.value.push(element);
               }
-              if (element.type === 'بیسکوئیت پذیرایی' && element.brand === 'کوپا گندم' && element.grade == query.value.grade) {
+              if (element.type === 'بیسکوئیت پذیرایی' && element.brand === 'کوپا گندم' && element.grade == info.value.grade) {
                 let x = copaPaziraeeGandom.value.filter((item)=>{return item.id != element.product_id });
                 copaPaziraeeGandom.value = x;
                 copaPaziraeeGandom.value.push(element);
               }
-              if (element.type === 'بیسکوئیت پذیرایی' && element.brand === 'کوپا جو' && element.grade == query.value.grade) {
+              if (element.type === 'بیسکوئیت پذیرایی' && element.brand === 'کوپا جو' && element.grade == info.value.grade) {
                 let x = copaPaziraeeJo.value.filter((item)=>{return item.id != element.product_id });
                 copaPaziraeeJo.value = x;
                 copaPaziraeeJo.value.push(element);
               }
 
-              if (element.type === 'شکلات صبحانه' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'شکلات صبحانه' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 let x = copaChocolateSobhane.value.filter((item)=>{return item.id != element.product_id });
                 copaChocolateSobhane.value = x;
                 copaChocolateSobhane.value.push(element);
               }
 
-              if (element.type === 'آدامس' && element.brand === 'اکس فست' && element.grade == query.value.grade) {
+              if (element.type === 'آدامس' && element.brand === 'اکس فست' && element.grade == info.value.grade) {
                 let x = xfastAdams.value.filter((item)=>{return item.id != element.product_id });
                 xfastAdams.value = x;
                 xfastAdams.value.push(element);
               }
 
-              if (element.type === 'ویفر' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'ویفر' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 let x = copaWafer.value.filter((item)=>{return item.id != element.product_id });
                 copaWafer.value = x;
                 copaWafer.value.push(element);
               }
 
 
-              if (element.type === 'پودینگ' && element.brand === 'فیت و فان' && element.grade == query.value.grade) {
+              if (element.type === 'پودینگ' && element.brand === 'فیت و فان' && element.grade == info.value.grade) {
                 let x = fitoFunPouding.value.filter((item)=>{return item.id != element.product_id });
                 fitoFunPouding.value = x;
                 fitoFunPouding.value.push(element);
               }
 
 
-              if (element.type === 'ویفر' && element.brand === 'کانتی' && element.grade == query.value.grade) {
+              if (element.type === 'ویفر' && element.brand === 'کانتی' && element.grade == info.value.grade) {
                 let x = kantiWafer.value.filter((item)=>{return item.id != element.product_id });
                 kantiWafer.value = x;
                 kantiWafer.value.push(element);
               }
 
 
-              if (element.type === 'ویفر' && element.brand === 'تامبی' && element.grade == query.value.grade) {
+              if (element.type === 'ویفر' && element.brand === 'تامبی' && element.grade == info.value.grade) {
                 let x = tombiWafer.value.filter((item)=>{return item.id != element.product_id });
                 tombiWafer.value = x;
                 tombiWafer.value.push(element);
               }
 
-              if (element.type === 'ویفر' && element.brand === 'کلاب' && element.grade == query.value.grade) {
+              if (element.type === 'ویفر' && element.brand === 'کلاب' && element.grade == info.value.grade) {
                 let x = clubWafer.value.filter((item)=>{return item.id != element.product_id });
                 clubWafer.value = x;
                 clubWafer.value.push(element);
               }
 
 
-              if (element.type === 'بیسکوئیت' && element.brand === 'او کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'بیسکوئیت' && element.brand === 'او کوپا' && element.grade == info.value.grade) {
                 let x = ocopa.value.filter((item)=>{return item.id != element.product_id });
                 ocopa.value = x;
                 ocopa.value.push(element);
               }
 
 
-              if (element.type === 'بیسکوئیت' && element.brand === 'کوپا' && element.grade == query.value.grade) {
+              if (element.type === 'بیسکوئیت' && element.brand === 'کوپا' && element.grade == info.value.grade) {
                 let x = copaBiscuit.value.filter((item)=>{return item.id != element.product_id });
                 copaBiscuit.value = x;
                 copaBiscuit.value.push(element);
@@ -782,16 +782,19 @@ export default {
             console.log('aaa', eliteNoodle.value)
           }).catch((error) => {console.error(error)})
     }
+    const info = ref([]);
     onMounted(async () => {
       await router.isReady();
       query.value = route.query;
+
+      info.value = JSON.parse(localStorage.getItem('report_visit_info'));
       getForm();
       getPoints();
     })
 
 
     return {
-      types, brands, getForm, form, route, router, query, points, getPoints,
+      info, types, brands, getForm, form, route, router, query, points, getPoints,
       eliteSoup, eliteNoodle, eliteOsareh, eliteAsh, eliteParak, eliteAdvieh, elitePasta, elitePiazdaq,
       lazizSoup, lazizOsareh, lazizNoodle,
       nodiland,
@@ -836,7 +839,7 @@ table {
   font-size: 10px !important;
 }
 .t-container{
-  max-width: 15cm;
+  max-width: 295mm;
 }
 .title{
   /*position: relative;*/
