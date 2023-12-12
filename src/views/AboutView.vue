@@ -232,7 +232,6 @@
         </div>
         <div class="col-6 px-0">
 
-
           <table v-if="ocopa.length" class="table table-bordered border">
             <tbody>
             <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >او کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
@@ -250,7 +249,6 @@
             </tr>
             </tbody>
           </table>
-
 
           <table v-if="copaPaziraee.length" class="table table-bordered border">
             <tbody>
@@ -277,8 +275,6 @@
             </tr>
             </tbody>
           </table>
-
-
 
           <div class="pt-4 pe-5">
             <table v-if="form.length" class="table table-bordered border">
