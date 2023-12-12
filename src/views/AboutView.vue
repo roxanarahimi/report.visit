@@ -280,7 +280,7 @@
 
 
 
-          <div class="p-3">
+          <div class="pt-4 pe-5">
             <table v-if="form.length" class="table table-bordered border">
               <tbody>
               <tr>
