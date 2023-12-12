@@ -6,6 +6,7 @@
       <h3>{{ info?.date }}</h3>
     </div>
 
+
     <div class="tables_container">
     <div style="min-width: 600px;">
       <div class="t-container container row mx-auto mb-3" >
@@ -359,9 +360,6 @@
 
 
       </div>
-
-
-
     </div>
     </div>
   </div>
@@ -372,9 +370,8 @@ import {onMounted, ref} from "vue";
 import {useRoute, useRouter} from "vue-router/dist/vue-router";
 import trueFalse from "@/components/TrueFalse";
 
-
 export default {
-  components: {trueFalse, },
+  components: {trueFalse},
   setup() {
     const pdfOptions = {
       margin: 2,
@@ -811,10 +808,7 @@ export default {
     }
   }
   ,
-  mounted() {
-    // this.$refs.vue3SimpleHtml2pdf.download();
 
-  }
 }
 </script>
 
