@@ -1,0 +1,126 @@
+body{
+    /*max-width: 410px !important;*/
+    margin: 0px auto;
+    direction: rtl !important;
+    text-align: right !important;
+    scroll-behavior: smooth;
+    background-color: white;
+}
+
+* {
+    transition: all 0.5s ease !important;
+    font-family: 'IranSans';
+}
+
+/*.sectionsWrapper{*/
+/*    overflow-y: scroll !important;*/
+/*    scroll-snap-type: y mandatory !important;*/
+/*}*/
+
+::-webkit-scrollbar {
+    width: 5px;
+    cursor: pointer !important;
+    background-color: gray !important;
+}
+
+
+/* Track */
+::-webkit-scrollbar-track {
+    /*box-shadow: inset 0 0 5px grery;*/
+    /*border-radius: 10px;*/
+    cursor: pointer !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: dimgray;
+    border-radius: 5px;
+    cursor: pointer !important;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: darkgray;
+    cursor: pointer !important;
+
+}
+
+.box{
+    border: 1px solid black;
+    height: 88px;
+    border-radius: 8px;
+    background-color: #D9D9D9;
+    display: grid;
+}
+.btn-btn{
+    border: 1px solid black;
+    color: black;
+    height: 32px;
+    line-height: 18px;
+    border-radius: 8px;
+    background-color: #D9D9D9;
+}
+.btn-btn2{
+    border: 1px solid black;
+    color: black;
+    height: 24px;
+    line-height: 12px;
+    border-radius: 8px;
+    background-color: #D9D9D9;
+}
+.btn-btn3{
+    color: black;
+    height: 24px;
+    width: 24px;
+    line-height: 12px;
+    /*font-size: 20px;*/
+    border: none !important;
+}
+.btn-btn3:hover, .btn-btn3:focus{
+    border: none !important;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.input-container{
+height: 33px;
+    border-radius: 0  8px 8px 0;
+    color: white;
+    background-color: #979797;
+    text-align: right !important;
+}
+.input-container .input{
+    background-color: transparent;
+    border: none;
+    padding-top: 5px;
+    text-align: right !important;
+    max-width: 100px !important;
+}
+.input-container .input:focus{
+   outline-width: 0;
+
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+}
+input[type=number] {
+    -moz-appearance: textfield !important;
+}
+.title-container{
+ height: 33px;
+    border-radius:  8px 0 0 8px;
+    color: white;
+    background-color: black;
+   text-align: center;
+    padding-top: 7px;
+}
+hr{
+    border: 1px black solid;
+    opacity: 1;
+}
