@@ -1,9 +1,18 @@
 <template>
   <div class="about ">
-    <div  class="d-flex justify-content-around my-5 mx-auto">
+    <div  class="d-flex justify-content-around my-5 mx-auto px-lg-5">
       <h3>{{ info?.name }}</h3>
       <h3>{{  info?.shop_name }}</h3>
       <h3>{{ info?.date }}</h3>
+      <div>
+        <a class="btn btn-dark" title="دانلود فرم" :href="'https://api.amadehlaziz.com:446/form/report/'+route.params.id+'?api_key=mJF2qVIOq22K1LvNBp9gDiOcK8e2p'">
+          دانلود فرم
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+          </svg>
+        </a>
+      </div>
     </div>
 
 
@@ -267,6 +276,7 @@
             </tr>
             </tbody>
           </table>
+
           <table v-if="copaBiscuit.length" class="table table-bordered border">
             <tbody>
             <tr><th rowspan="100" class="title" ><p class="p-0 m-0" >بیسکوئیت مستطیلی کوپا</p></th><th>عنوان</th><th>شلف</th><th>ف/ت</th></tr>
@@ -602,9 +612,6 @@ export default {
       axios.get('https://api.amadehlaziz.com:446/panel/form_products/' + route.params.id + '?api_key=w2fqxjKzdlx345NjQ7D99xz5cPp')
           .then((response) => {
             form.value = response.data
-
-            console.log('form', form.value)
-
             form.value.forEach((element) => {
               if (element.type === 'سوپ' && element.brand === 'الیت' && element.grade == info.value.grade) {
                 let x = eliteSoup.value.filter((item)=>{return item.id != element.product_id });
@@ -772,7 +779,6 @@ export default {
 
 
             })
-            console.log('aaa', eliteNoodle.value)
           }).catch((error) => {console.error(error)})
     }
     const info = ref([]);
