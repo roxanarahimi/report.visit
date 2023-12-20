@@ -1,11 +1,11 @@
 <template>
   <div class="about ">
-    <div  class="d-flex justify-content-around my-5 mx-auto px-lg-5">
-      <h3>{{ info?.name }}</h3>
-      <h3>{{  info?.shop_name }}</h3>
-      <h3>{{ info?.date }}</h3>
-      <div>
-        <a class="btn btn-dark" title="دانلود فرم" :href="'https://api.amadehlaziz.com:446/form/report/'+route.params.id+'?api_key=mJF2qVIOq22K1LvNBp9gDiOcK8e2p'">
+    <div  class="row d-flex justify-content-around my-5 mx-auto px-lg-5">
+      <h3 class="col-lg-2 mb-3">{{ info?.name }}</h3>
+      <h3 class="col-lg-4 mb-3">{{  info?.shop_name }}</h3>
+      <h3 class="col-lg-2 mb-3">{{ info?.date }}</h3>
+      <div class="col-lg-2 mb-3">
+        <a class="btn btn-dark btn-sm" title="دانلود فرم" :href="'https://api.amadehlaziz.com:446/form/report/'+route.params.id+'?api_key=mJF2qVIOq22K1LvNBp9gDiOcK8e2p'">
           دانلود فرم
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
             <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
@@ -13,6 +13,16 @@
           </svg>
         </a>
       </div>
+      <div class="col-lg-2 mb-3">
+        <a class="btn btn-dark btn-sm" title="دانلود فرم" :href="'https://api.amadehlaziz.com:446/form/competitor_report/'+route.params.id+'?api_key=mJF2qVIOq22K1LvNBp9gDiOcK8e2p'">
+          دانلود فرم رقیب
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+          </svg>
+        </a>
+      </div>
+
     </div>
 
 
