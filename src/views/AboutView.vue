@@ -5,7 +5,7 @@
       <h3>{{  info?.shop_name }}</h3>
       <h3>{{ info?.date }}</h3>
       <div>
-        <a class="btn btn-dark" title="دانلود فرم" :href="'http://api.amadehlaziz.com:8877/form/report/'+route.params.id+'?api_key=mJF2qVIOq22K1LvNBp9gDiOcK8e2p'">
+        <a class="btn btn-dark" title="دانلود فرم" :href="'https://api.amadehlaziz.com:446/form/report/'+route.params.id+'?api_key=mJF2qVIOq22K1LvNBp9gDiOcK8e2p'">
           دانلود فرم
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
             <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
@@ -484,14 +484,14 @@ export default {
 
 
     const getPoints = () => {
-      axios.get('http://api.amadehlaziz.com:8877/form/'+route.params.id+'?api_key=mJF2qVIOq22K1LvNBp9gDiOcK8e2p')
+      axios.get('https://api.amadehlaziz.com:446/form/'+route.params.id+'?api_key=mJF2qVIOq22K1LvNBp9gDiOcK8e2p')
           .then((response) => {
             points.value = response.data.points;
 
           }).catch();
     }
     const getForm = () => {
-      axios.get('http://api.amadehlaziz.com:8877/panel/products/'+JSON.parse(localStorage.getItem('report_visit_info')).grade+'?api_key=w2fqxjKzdlx345NjQ7D99xz5cPp')
+      axios.get('https://api.amadehlaziz.com:446/panel/products/'+JSON.parse(localStorage.getItem('report_visit_info')).grade+'?api_key=w2fqxjKzdlx345NjQ7D99xz5cPp')
           .then((response) => {
             form.value = response.data
 
@@ -609,7 +609,7 @@ export default {
             console.log('aaa', eliteNoodle.value)
           }).catch((error) => {console.error(error)})
 
-      axios.get('http://api.amadehlaziz.com:8877/panel/form_products/' + route.params.id + '?api_key=w2fqxjKzdlx345NjQ7D99xz5cPp')
+      axios.get('https://api.amadehlaziz.com:446/panel/form_products/' + route.params.id + '?api_key=w2fqxjKzdlx345NjQ7D99xz5cPp')
           .then((response) => {
             form.value = response.data
             form.value.forEach((element) => {

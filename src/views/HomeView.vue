@@ -91,7 +91,7 @@ export default {
 
     const forms = ref([]);
     const getForms = () => {
-      axios.get('http://api.amadehlaziz.com:8877/form/all_forms_metadata?api_key=mJF2qVIOq22K1LvNBp9gDiOcK8e2p')
+      axios.get('https://api.amadehlaziz.com:446/form/all_forms_metadata?api_key=mJF2qVIOq22K1LvNBp9gDiOcK8e2p')
           .then((response) => {
             forms.value = response.data
             console.log('forms', forms.value)
@@ -152,14 +152,14 @@ export default {
 
     const getVisitors = ()=>{
 
-      axios.get('http://api.amadehlaziz.com:8877/panel/users?api_key=w2fqxjKzdlx345NjQ7D99xz5cPp')
+      axios.get('https://api.amadehlaziz.com:446/panel/users?api_key=w2fqxjKzdlx345NjQ7D99xz5cPp')
           .then((response)=>{
             visitors.value = response.data
           })
           .catch((error)=>{ console.log(error)});
     }
     const getShops = ()=>{
-      axios.get('http://api.amadehlaziz.com:8877/panel/shops?api_key=w2fqxjKzdlx345NjQ7D99xz5cPp&grade=')
+      axios.get('https://api.amadehlaziz.com:446/panel/shops?api_key=w2fqxjKzdlx345NjQ7D99xz5cPp&grade=')
           .then((response)=>{
             shops.value = response.data
           })
