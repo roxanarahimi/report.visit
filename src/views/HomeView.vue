@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+
+
+
     <div class="container py-5">
       <h3 class="mb-5">گزارش فرم ها</h3>
       
@@ -57,11 +60,11 @@
           <tbody>
           <tr v-for="(item,index) in forms" :key="index">
             <th scope="row">{{ index + 1 }}</th>
-            <td><router-link :to="'/form/'+item.form_id" @click="storeInfo(item)">{{ item.visitor_name }} </router-link></td>
+            <td><router-link :to="'/form/'+item.form_id" @click="storeInfo(item,index)">{{ item.visitor_name }} </router-link></td>
             <td>{{ item.shop_city }}</td>
             <td>{{ item.shop_grade }}</td>
             <td>{{ item.shop_name }}</td>
-            <td>{{  item.visit_date }}</td>
+            <td :id="'date'+index"> <shamsi-date :date="item.visit_date" /></td>
           </tr>
           </tbody>
         </table>
@@ -80,11 +83,12 @@
 
 import {onMounted, ref} from "vue";
 import DatePicker from 'vue3-persian-datetime-picker'
+import ShamsiDate from "@/components/ShamsiDate";
 
 export default {
   name: "HomeView",
   components: {
-    DatePicker
+    DatePicker, ShamsiDate
   },
   setup() {
 
@@ -166,6 +170,7 @@ export default {
           .catch((error)=>{ console.log(error)});
     }
 
+
     const filter = ()=>{
       forms.value = [];
       getForms();
@@ -188,8 +193,8 @@ export default {
       getVisitors();
       getShops();
     })
-    const storeInfo = (item)=>{
-      let info = {grade: item.shop_grade,shop_name: item.shop_name, date:item.visit_date, name:item.visitor_name}
+    const storeInfo = (item,index)=>{
+      let info = {grade: item.shop_grade,shop_name: item.shop_name, date:document.querySelector('#date'+index).innerHTML, name:item.visitor_name}
       localStorage.setItem('report_visit_info' , JSON.stringify(info))
     }
     return {
